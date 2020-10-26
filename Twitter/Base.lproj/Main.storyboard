@@ -19,7 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMP-09-WoT">
                                 <rect key="frame" x="114.5" y="421" width="185" height="54"/>
-                                <color key="backgroundColor" red="0.53375603753670631" green="0.7808563036630034" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5337560375" green="0.78085630370000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="bAf-qu-15H"/>
                                     <constraint firstAttribute="height" constant="54" id="x6T-FB-sEa"/>
@@ -41,19 +41,19 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="l8l-bo-Wkp" kind="presentation" identifier="loginToHome" id="baE-Co-d7n"/>
+                        <segue destination="l8l-bo-Wkp" kind="presentation" identifier="loginToHome" modalPresentationStyle="fullScreen" id="baE-Co-d7n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bdw-6T-MOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3717.3913043478265" y="-66.294642857142861"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="tPr-uZ-OCb">
             <objects>
-                <tableViewController id="BhQ-6J-NZ6" sceneMemberID="viewController">
+                <tableViewController id="BhQ-6J-NZ6" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IBT-Df-Sr8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -71,7 +71,14 @@
                             <outlet property="delegate" destination="BhQ-6J-NZ6" id="gPl-UP-8jb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="EgC-AH-Ic5"/>
+                    <navigationItem key="navigationItem" title="Home" id="EgC-AH-Ic5">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="GHh-6z-16y">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onLogout:" destination="BhQ-6J-NZ6" id="vrr-ea-pJO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1m-Du-ddc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,9 +88,14 @@
         <scene sceneID="shR-De-zmP">
             <objects>
                 <navigationController id="l8l-bo-Wkp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="q4N-7z-1Px"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Noh-MJ-Xgw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.5337560375" green="0.78085630370000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BhQ-6J-NZ6" kind="relationship" relationship="rootViewController" id="BLy-nY-fSH"/>
