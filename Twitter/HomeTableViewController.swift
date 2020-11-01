@@ -87,9 +87,9 @@ class HomeTableViewController: UITableViewController {
         UserDefaults.standard.set(false, forKey: "userLoggedIn")
     }
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetCellTableViewCell
-        
         let user = tweetArray[indexPath.row]["user"] as! NSDictionary
         
         
@@ -105,6 +105,8 @@ class HomeTableViewController: UITableViewController {
         
         cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
         cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
+        
         
         return cell
     }
