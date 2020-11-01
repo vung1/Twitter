@@ -2,7 +2,7 @@
 
 This is a basic twitter app to read your tweets.
 
-Time spent: **4** hours spent in total
+Time spent: **5** hours spent in total
 
 ## User Stories
 
@@ -16,11 +16,11 @@ The following **required** functionality is completed:
 
 The following **bonus** features are implemented:
 
-- [ ] User can pull to refresh. (1pt)
-- [ ] User can load past tweets infinitely. (2pts)
+- [X] User can pull to refresh. (1pt)
+- [X] User can load past tweets infinitely. (2pts)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://g.recordit.co/5Y7SNEAXCB.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/CPS2S13Kvf.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
